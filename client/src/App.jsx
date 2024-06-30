@@ -12,7 +12,7 @@ import { setContext } from '@apollo/client/link/context';
 
 
 const httpLink = createHttpLink({
-  uri: '/graphql',
+  uri: '/graphql', //tells Apollo Client to make requests to the /graphql endpoint on the same domain 
 }); //connects to the server's /graphql endpoint
 
 // Construct request middleware that will attach the JWT token to every request as an `authorization` header

@@ -29,12 +29,7 @@ const LoginForm = () => {
     }
 
     try {
-      const response = await loginUser(userFormData);
-
-      if (!response.ok) {
-        throw new Error('something went wrong!');
-      }
-
+      const {data} = await Login({variables:userFormData});
 
       Auth.login(data.login.token); // this is the token that is returned from the server sandbox
     } catch (err) {
