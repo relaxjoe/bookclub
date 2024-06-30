@@ -14,10 +14,10 @@ const router = createBrowserRouter([
     children: [
       {
         index: true,
-        element: <SearchBooks />
+        element: <SearchBooks /> // This is the default page
       }, {
         path: '/saved',
-        element: <SavedBooks />
+        element: <SavedBooks /> // This is the saved books page
       }
     ]
   }

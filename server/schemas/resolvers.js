@@ -68,7 +68,7 @@ const resolvers = {
         console.log(bookId)
         return User.findOneAndUpdate(
           { _id: context.user._id },
-          { $pull: { savedBooks: {bookId} } },
+          { $pull: { savedBooks: {bookId} } }, // $pull delete from array  $addToSet: adds to array { savedBooks: book } },
           { new: true }
         );
       }
